@@ -11,7 +11,7 @@
     "build": "rimraf build/ && babel ./ --out-dir build --ignore ./node_modules,./.babelrc,./package.json,./.prettierrc,./.eslintrc,./.travis.yml --copy-files",
     "start": "npm run build && node build/app.js",
     "test": "mocha --timeout 10000",
-    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-prebuild": "npm install",
     "heroku-postbuild": "npm install --production"
   },
   "repository": {
