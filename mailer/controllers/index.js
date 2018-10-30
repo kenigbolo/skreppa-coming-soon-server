@@ -15,9 +15,8 @@ exports.createEmailEntry = async (req, res) => {
     const {rows} = await db.query(text, values);
     return res
       .status(201)
-      .json({success: 'Email saved successfully', data: rows[0]});
+      .json({success: 'Email saved successfully', data: rows[0].email});
   } catch (error) {
-    console.log(error);
     return res.status(400).json({error});
   }
 };
