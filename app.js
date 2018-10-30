@@ -10,5 +10,9 @@ app.post('/', (req, res) => {
   mailer.createEmailEntry(req, res);
 });
 
+app.get('/', (_, res) => {
+  res.status(200).send('Server up and running');
+});
+
 console.log('Server is running');
 app.listen(process.env.PORT || 8080);

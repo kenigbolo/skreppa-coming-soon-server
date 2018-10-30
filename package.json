@@ -1,6 +1,6 @@
 {
   "name": "skreppa-coming-soon-server",
-  "version": "1.1.2",
+  "version": "1.0.0",
   "description": "skreppa-coming-soon-server",
   "main": "build/app.js",
   "engines": {
@@ -11,8 +11,8 @@
     "build": "rimraf build/ && babel ./ --out-dir build --ignore ./node_modules,./.babelrc,./package.json,./.prettierrc,./.eslintrc,./.travis.yml --copy-files",
     "start": "npm run build && node build/app.js",
     "test": "mocha --timeout 10000",
-    "heroku-prebuild": "npm install",
-    "heroku-postbuild": "npm install --production"
+    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;"
   },
   "repository": {
     "type": "git",
