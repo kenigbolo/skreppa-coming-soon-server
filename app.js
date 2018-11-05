@@ -1,10 +1,20 @@
 import express from 'express';
 import mailer from './mailer/controllers/index';
 import dotenv from 'dotenv';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
+import helmet from 'helmet';
+
 dotenv.config();
 const app = express();
 
-app.use(express.json());
+app.use(helmet());
+app.use(bodyParser.json());
+app.use(cookieParser('SEKR37'));
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(cors());
 
 app.post('/', (req, res) => {
   mailer.createEmailEntry(req, res);
