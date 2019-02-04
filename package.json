@@ -36,7 +36,7 @@
     "mocha": "^5.2.0",
     "prettier": "^1.16.4",
     "rimraf": "^2.6.3",
-    "superagent": ">=3.7.0"
+    "superagent": ">=4.1.0"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
