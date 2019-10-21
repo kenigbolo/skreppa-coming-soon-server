@@ -33,7 +33,7 @@
     "chai-http": "^4.3.0",
     "eslint": "^6.5.1",
     "eslint-config-google": "^0.14.0",
-    "mocha": "^6.2.1",
+    "mocha": "^6.2.2",
     "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "superagent": ">=5.1.0"
