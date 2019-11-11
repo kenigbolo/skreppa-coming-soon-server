@@ -34,7 +34,7 @@
     "eslint": "^6.6.0",
     "eslint-config-google": "^0.14.0",
     "mocha": "^6.2.2",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "superagent": ">=5.1.0"
   },
